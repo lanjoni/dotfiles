@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<FileZilla3 version="3.58.0" platform="mac">
-	<FtpSessionResumption>
-		<Entry Host="ftp.convento.dev" Port="21">true</Entry>
-		<Entry Host="ftp.nimblevirtual.com" Port="21">true</Entry>
-	</FtpSessionResumption>
-</FileZilla3>

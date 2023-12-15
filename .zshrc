@@ -8,8 +8,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
-
+# ZSH_THEME="yan"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
+SPACESHIP_SCALA_SHOW=false
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -70,14 +72,14 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git thefuck zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export EDITOR=vi
-export TERM=xterm
+export TERM=xterm-256color
 export LANG=en_US.UTF-8
 
 # commands history
@@ -121,11 +123,17 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # opam
 eval $(opam env)
 
-# thefuck
-eval $(thefuck --alias)
+# go
+export PATH="/Users/guto/go/bin/:$PATH"
 
 # terraform
-export PATH="/Users/guto/.terraform/:$PATH"
+export PATH="/Users/guto/.terraform:$PATH"
+
+# layerform
+export PATH="/Users/guto/.layerform/:$PATH"
+
+# kubernetes
+source <(kubectl completion zsh)
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -140,3 +148,8 @@ export KERL_CONFIGURE_OPTIONS="--with-ssl=$(brew --prefix openssl)"
 export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
+export PATH="/opt/homebrew/opt/scala@2.13/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

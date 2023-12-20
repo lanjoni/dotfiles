@@ -6,6 +6,7 @@ require("lazy").setup({
     name = "catppuccin",
     priority = 1000
   },
+  "rebelot/kanagawa.nvim",
   "Biscuit-Colorscheme/nvim",
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",

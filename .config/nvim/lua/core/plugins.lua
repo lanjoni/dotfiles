@@ -13,6 +13,12 @@ require("lazy").setup({
   "nvim-lualine/lualine.nvim",
   "stevearc/oil.nvim",
   "andweeb/presence.nvim",
+  "folke/zen-mode.nvim",
+  "sindrets/diffview.nvim",
+  "lewis6991/gitsigns.nvim",
+  "rmagatti/goto-preview",
+  -- {"lukas-reineke/indent-blankline.nvim", tag = "v2.20.8", opts = {}},
+  {"ruifm/gitlinker.nvim", require = "nvim-lua/plenary.nvim"},
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   -- jack-in
   "tpope/vim-dispatch",
@@ -32,5 +38,9 @@ require("lazy").setup({
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
     dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+  {
+    "scalameta/nvim-metals",
+    dependencies = { "nvim-lua/plenary.nvim" }
   }
 })

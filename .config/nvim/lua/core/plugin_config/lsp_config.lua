@@ -1,5 +1,5 @@
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "solargraph", "tsserver", "gopls", "clojure_lsp" }
+  ensure_installed = { "lua_ls", "solargraph", "tsserver", "gopls", "elixirls", "clojure_lsp" }
 })
 
 local lspconfig = require('lspconfig')
@@ -20,8 +20,8 @@ require("lspconfig").lua_ls.setup {
       },
       workspace = {
         library = {
-          [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-          [vim.fn.stdpath "config" .. "/lua"] = true,
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+          [vim.fn.stdpath("config") .. "/lua"] = true,
         },
       },
     },
@@ -33,6 +33,8 @@ require("lspconfig").tsserver.setup({})
 require("lspconfig").gopls.setup({})
 require("lspconfig").clojure_lsp.setup({})
 require("lspconfig").rust_analyzer.setup({})
+require('lspconfig').metals.setup({})
+require('lspconfig').elixirls.setup({})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -61,3 +63,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
+

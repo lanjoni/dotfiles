@@ -1,17 +1,24 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
+  print("nvim is bootstrapping.")
+  local fn = vim.fn
+
+  fn.system({
     "git",
     "clone",
     "--filter=blob:none",
+    "--single-branch",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
     lazypath,
   })
 end
-vim.opt.rtp:prepend(lazypath)
 
-require("core.options")
-require("core.keymaps")
-require("core.plugins")
-require("core.plugin_config")
+vim.opt.runtimepath:prepend(lazypath)
+vim.loader.enable()
+
+-- Make sure to set `mapleader` before lazy so your mappings are correct
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
+
+require("lazy").setup("plugins")

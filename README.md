@@ -5,3 +5,7 @@ To install these dotfiles and automatically symlink with your home folder, pleas
 ### Systems
 - `artemis`: macbook
 - `turing`: desktop PC
+
+### Editor
+
+Neovim configuration inspired by [cajus-nfnl](https://github.com/rafaeldelboni/cajus-nfnl) with [Fennel](https://fennel-lang.org/)!

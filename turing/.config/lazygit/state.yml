@@ -2,6 +2,7 @@ lastupdatecheck: 0
 recentrepos:
 - /home/guto/dotfiles
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- q
 hidecommandlog: false
 ignorewhitespaceindiffview: false

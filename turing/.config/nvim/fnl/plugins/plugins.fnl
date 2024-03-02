@@ -8,6 +8,7 @@
 
  ;; Git 
  {1 :tpope/vim-fugitive}
+ {1 :kdheepak/lazygit.nvim}
 
  ;; Discord presence
  {1 :andweeb/presence.nvim}

@@ -20,6 +20,7 @@
             (let [lsp (require :lspconfig)
                   cmplsp (require :cmp_nvim_lsp)
                   mason (require :mason)
+                  mason-lsp-config (require :mason-lspconfig)
                   handlers {"textDocument/publishDiagnostics"
                             (vim.lsp.with
                               vim.lsp.diagnostic.on_publish_diagnostics
@@ -61,12 +62,30 @@
               ;; https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
               (mason.setup)
+              (mason-lsp-config.setup {:ensure_installed [:clojure_lsp
+                                                          :gopls 
+                                                          :tsserver
+                                                          :cssls
+                                                          :html 
+                                                          :jsonls 
+                                                          :lua_ls
+                                                          :fennel_language_server]})
 
               ;; Clojure
               (lsp.clojure_lsp.setup {:on_attach on_attach
                                       :handlers handlers
                                       :before_init before_init
                                       :capabilities capabilities})
+
+              ;; Lua 
+              (lsp.lua_ls.setup {:settings {:Lua {:diagnostics {:globals ["vim"
+                                                                          "nvim"]}}}})
+
+              ;; Fennel 
+              (lsp.fennel_language_server.setup {:on_attach on_attach
+                                                 :handlers handlers
+                                                 :before_init before_init
+                                                 :capabilities capabilities})
 
               ;; Go 
               (lsp.gopls.setup {:on_attach on_attach

@@ -9,7 +9,8 @@
           (nvim.set_keymap :n :<C-p> ":lua require('telescope.builtin').find_files()<CR>" {:noremap true})
           (nvim.set_keymap :n :<leader>fg ":lua require('telescope.builtin').live_grep()<CR>" {:noremap true})
           (nvim.set_keymap :n :<leader>fb ":lua require('telescope.builtin').buffers()<CR>" {:noremap true})
-          (nvim.set_keymap :n :<leader>fh ":lua require('telescope.builtin').help_tags()<CR>" {:noremap true}))
+          (nvim.set_keymap :n :<leader>fh ":lua require('telescope.builtin').help_tags()<CR>" {:noremap true})
+          (nvim.set_keymap :n :<leader>gg ":LazyGit<CR>" {:noremap false}))
   :config (fn []
             (let [telescope (require :telescope)
                   themes (require :telescope.themes)]
@@ -30,4 +31,5 @@
                                                                       "--iglob"
                                                                       "!.git"
                                                                       "--hidden"]}}})
-              (telescope.load_extension "ui-select")))}]
+              (telescope.load_extension "ui-select")
+              (telescope.load_extension "lazygit")))}]

@@ -14,19 +14,8 @@ local function lsp_connection()
     return "\239\130\150"
   end
 end
-local background = "#16161d"
-local kanagawa = {normal = {a = {bg = "#957FB8", fg = "#16161D"}, b = {bg = background, fg = "#957FB8"}, c = {bg = background, fg = "#DCD7BA"}}, insert = {a = {bg = "#76946A", fg = "#16161D"}, b = {bg = background, fg = "#76946A"}}, command = {a = {bg = "#C0A36E", fg = "#16161D"}, b = {bg = background, fg = "#C0A36E"}}, visual = {a = {bg = "#7E9CD8", fg = "#16161D"}, b = {bg = background, fg = "#7E9CD8"}}, replace = {a = {bg = "#C34043", fg = "#16161D"}, b = {bg = background, fg = "#C34043"}}, inactive = {a = {bg = "#0D1014", fg = "#7E9CD8"}, b = {bg = "#0D1014", fg = "#727169", gui = "bold"}, c = {bg = "#0D1014", fg = "#727169"}}}
-local grey14 = "#16161D"
-local grey15 = "#181820"
-local grey16 = "#16161D"
-if vim.g.kanagawa_lualine_bold then
-  for _ = mode, pairs(kanagawa) do
-    mode.a.gui = "bold"
-  end
-else
-end
-local function _4_()
+local function _3_()
   local lualine = require("lualine")
-  return lualine.setup({options = {theme = kanagawa, icons_enabled = true, section_separators = {"", ""}, component_separators = {"\239\145\138", "\239\144\184"}}, extensions = {"fugitive", "fzf", "nvim-tree"}, sections = {lualine_a = {}, lualine_b = {{"mode", {upper = true}}}, lualine_c = {{"FugitiveHead"}, {"filename", file_status = true, path = 1, shorting_target = 40}}, lualine_x = {{"diagnostics", sections = {"error", "warn", "info", "hint"}, sources = {"nvim_lsp"}}, {lsp_connection}, "location", "filetype"}, lualine_y = {"encoding"}, lualine_z = {}}, inactive_sections = {lualine_a = {}, lualine_b = {}, lualine_c = {{"filename", file_status = true, path = 1}}, lualine_x = {}, lualine_y = {}, lualine_z = {}}})
+  return lualine.setup({options = {theme = "kanagawa", icons_enabled = true, section_separators = {"", ""}, component_separators = {"\239\145\138", "\239\144\184"}}, extensions = {"fugitive", "fzf", "nvim-tree"}, sections = {lualine_b = {{"mode", {upper = true}}}, lualine_c = {{"FugitiveHead"}, {"filename", file_status = true, path = 1, shorting_target = 40}}, lualine_x = {{"diagnostics", sections = {"error", "warn", "info", "hint"}, sources = {"nvim_lsp"}}, {lsp_connection}, "location", "filetype"}, lualine_y = {"encoding"}, lualine_z = {}}, inactive_sections = {lualine_a = {}, lualine_b = {}, lualine_c = {{"filename", file_status = true, path = 1}}, lualine_x = {}, lualine_y = {}, lualine_z = {}}})
 end
-return {{"nvim-lualine/lualine.nvim", config = _4_}}
+return {{"nvim-lualine/lualine.nvim", config = _3_}}

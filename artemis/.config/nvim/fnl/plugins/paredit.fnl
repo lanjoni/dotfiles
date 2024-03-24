@@ -24,4 +24,7 @@
 
  {1 :windwp/nvim-autopairs
   :event "InsertEnter"
-  :opts {}}]
+  :opts {}
+  :config (fn []
+            (let [autopairs (require :nvim-autopairs)]
+              (autopairs.setup {:enable_check_bracket_line false})))}]

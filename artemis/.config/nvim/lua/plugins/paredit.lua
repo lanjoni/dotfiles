@@ -14,4 +14,8 @@ local function _4_()
   local surround = require("nvim-surround")
   return surround.setup()
 end
-return {{"julienvincent/nvim-paredit", lazy = true, ft = {"clojure", "fennel"}, config = _2_}, {"julienvincent/nvim-paredit-fennel", dependencies = {"julienvincent/nvim-paredit"}, lazy = true, ft = {"fennel"}, config = _3_}, {"kylechui/nvim-surround", event = "VeryLazy", config = _4_}, {"windwp/nvim-autopairs", event = "InsertEnter", opts = {}}}
+local function _5_()
+  local autopairs = require("nvim-autopairs")
+  return autopairs.setup({enable_check_bracket_line = false})
+end
+return {{"julienvincent/nvim-paredit", lazy = true, ft = {"clojure", "fennel"}, config = _2_}, {"julienvincent/nvim-paredit-fennel", dependencies = {"julienvincent/nvim-paredit"}, lazy = true, ft = {"fennel"}, config = _3_}, {"kylechui/nvim-surround", event = "VeryLazy", config = _4_}, {"windwp/nvim-autopairs", event = "InsertEnter", opts = {}, config = _5_}}

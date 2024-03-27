@@ -31,5 +31,10 @@ alias install="sudo pacman -Sy"
 alias update="sudo pacman -Syu"
 alias remove="sudo pacman -R"
 alias autoremove='sudo pacman -R $(pacman -Qdtq)'
-alias ssh="kitten ssh"
-alias felix="kitten ssh felix@209.133.204.26 -p 13031"
+if test "$TERM" = "xterm-kitty"
+  alias ssh="kitten ssh"
+  alias felix="kitten ssh felix@209.133.204.26 -p 13031"
+else
+  alias ssh="ssh"
+  alias felix="ssh felix@209.133.204.26 -p 13031"
+end

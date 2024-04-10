@@ -1,0 +1,20 @@
+import = [
+  "~/.config/alacritty/themes/themes/kanagawa_dark.toml"
+]
+
+[font]
+size = 15
+
+[font.normal]
+family = "Monaco Nerd Font"
+
+[font.offset]
+x = 0
+y = 0
+
+[window]
+startup_mode = "Maximized"
+
+[window.padding]
+x = 15
+y = 0

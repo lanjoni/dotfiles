@@ -16,8 +16,6 @@ define_signs("Diagnostic")
 local function _2_()
   local lsp = require("lspconfig")
   local cmplsp = require("cmp_nvim_lsp")
-  local mason = require("mason")
-  local mason_lsp_config = require("mason-lspconfig")
   local handlers = {["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {severity_sort = true, update_in_insert = true, underline = true, virtual_text = true}), ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "single"}), ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = "single"})}
   local capabilities = cmplsp.default_capabilities()
   local before_init
@@ -46,11 +44,11 @@ local function _2_()
     return nvim.buf_set_keymap(bufnr, "n", "<leader>li", ":lua require('telescope.builtin').lsp_implementations()<cr>", {noremap = true})
   end
   on_attach = _4_
-  mason.setup()
-  mason_lsp_config.setup({ensure_installed = {"clojure_lsp", "gopls", "tsserver", "cssls", "html", "jsonls", "lua_ls", "fennel_language_server"}})
   lsp.clojure_lsp.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
   lsp.lua_ls.setup({settings = {Lua = {diagnostics = {globals = {"vim", "nvim"}}}}})
   lsp.fennel_language_server.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
+  lsp.elixirls.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
+  lsp.elp.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
   lsp.gopls.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
   lsp.tsserver.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
   lsp.cssls.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities, cmd = {"css-languageserver", "--stdio"}})

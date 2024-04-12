@@ -1,6 +1,3 @@
-(local {: autoload} (require :nfnl.module))
-(local nvim (autoload :nvim))
-
 [{1 :echasnovski/mini.indentscope
   :config (fn []
             (let [mini-indentscope (require :mini.indentscope)]

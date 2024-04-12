@@ -3,4 +3,4 @@ local function _1_()
   local gitsigns = require("gitsigns")
   return gitsigns.setup({})
 end
-return {{"lewis6991/gitsigns.nvim", config = _1_}}
+return {{"tpope/vim-fugitive"}, {"lewis6991/gitsigns.nvim", config = _1_}}

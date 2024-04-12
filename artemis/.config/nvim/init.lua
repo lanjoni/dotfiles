@@ -14,6 +14,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
+vim.opt.termguicolors = true
 vim.opt.runtimepath:prepend(lazypath)
 vim.loader.enable()
 

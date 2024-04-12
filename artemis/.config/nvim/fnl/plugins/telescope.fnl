@@ -4,9 +4,10 @@
 [{1 :nvim-telescope/telescope.nvim
   :dependencies [:nvim-telescope/telescope-ui-select.nvim
                  :nvim-lua/popup.nvim
-                 :nvim-lua/plenary.nvim]
+                 :nvim-lua/plenary.nvim
+                 :kdheepak/lazygit.nvim]
   :init (fn []
-          (nvim.set_keymap :n :<C-p> ":lua require('telescope.builtin').find_files()<CR>" {:noremap true})
+          (nvim.set_keymap :n :<leader>ff ":lua require('telescope.builtin').find_files()<CR>" {:noremap true})
           (nvim.set_keymap :n :<leader>fg ":lua require('telescope.builtin').live_grep()<CR>" {:noremap true})
           (nvim.set_keymap :n :<leader>fb ":lua require('telescope.builtin').buffers()<CR>" {:noremap true})
           (nvim.set_keymap :n :<leader>fh ":lua require('telescope.builtin').help_tags()<CR>" {:noremap true})

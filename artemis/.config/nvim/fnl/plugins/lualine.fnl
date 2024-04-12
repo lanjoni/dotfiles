@@ -27,12 +27,16 @@
               (lualine.setup
                 {:options {:theme "kanagawa"
                            :icons_enabled true
+                           :global_status true
                            :section_separators ["" ""]
-                           :component_separators ["" ""]}
-                 :extensions ["fugitive"
-                              "fzf"
-                              "nvim-tree"]
-                 :sections {:lualine_b [[:mode {:upper true}]]
+                           :component_separators ""
+                           :disabled_filetypes [:DiffviewFiles
+                                                :fzf
+                                                :DiffviewFileHistory]}
+                 :extensions [:fugitive
+                              :fzf
+                              :nvim-tree]
+                 :sections {:lualine_b []
                             :lualine_c [["FugitiveHead"]
                                         {1 :filename
                                          :file_status true
@@ -48,9 +52,7 @@
                             :lualine_z []}
                  :inactive_sections {:lualine_a []
                                      :lualine_b []
-                                     :lualine_c [{1 :filename
-                                                  :file_status true
-                                                  :path 1}]
+                                     :lualine_c []
                                      :lualine_x []
                                      :lualine_y []
                                      :lualine_z []}})))}]

@@ -1,5 +1,5 @@
 [{1 :github/copilot.vim
-  :lazy false}
+  :lazy true}
 
  ;; Jack-in for Clojure
  {1 :tpope/vim-dispatch}

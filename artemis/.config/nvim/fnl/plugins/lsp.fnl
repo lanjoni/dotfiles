@@ -82,7 +82,8 @@
               (lsp.elixirls.setup {:on_attach on_attach
                                    :handlers handlers
                                    :before_init before_init
-                                   :capabilities capabilities})
+                                   :capabilities capabilities
+                                   :cmd ["/opt/homebrew/bin/elixir-ls"]})
 
               ;; Erlang
               (lsp.elp.setup {:on_attach on_attach

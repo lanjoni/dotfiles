@@ -16,6 +16,6 @@ local function lsp_connection()
 end
 local function _3_()
   local lualine = require("lualine")
-  return lualine.setup({options = {theme = "kanagawa", icons_enabled = true, global_status = true, section_separators = {"", ""}, component_separators = "", disabled_filetypes = {"DiffviewFiles", "fzf", "DiffviewFileHistory"}}, extensions = {"fugitive", "fzf", "neo-tree"}, sections = {lualine_b = {}, lualine_c = {{"FugitiveHead"}, {"filename", file_status = true, path = 1, shorting_target = 40}}, lualine_x = {{"diagnostics", sections = {"error", "warn", "info", "hint"}, sources = {"nvim_lsp"}}, {lsp_connection}, "location", "filetype"}, lualine_y = {"encoding"}, lualine_z = {}}, inactive_sections = {lualine_a = {}, lualine_b = {}, lualine_c = {}, lualine_x = {}, lualine_y = {}, lualine_z = {}}})
+  return lualine.setup({options = {theme = "tokyonight", icons_enabled = true, global_status = true, section_separators = {"", ""}, component_separators = "", disabled_filetypes = {"DiffviewFiles", "fzf", "DiffviewFileHistory"}}, extensions = {"fugitive", "fzf", "neo-tree"}, sections = {lualine_b = {}, lualine_c = {{"FugitiveHead"}, {"filename", file_status = true, path = 1, shorting_target = 40}}, lualine_x = {{"diagnostics", sections = {"error", "warn", "info", "hint"}, sources = {"nvim_lsp"}}, {lsp_connection}, "location", "filetype"}, lualine_y = {"encoding"}, lualine_z = {}}, inactive_sections = {lualine_a = {}, lualine_b = {}, lualine_c = {}, lualine_x = {}, lualine_y = {}, lualine_z = {}}})
 end
 return {{"nvim-lualine/lualine.nvim", config = _3_}}

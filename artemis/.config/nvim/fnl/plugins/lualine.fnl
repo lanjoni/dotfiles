@@ -25,7 +25,7 @@
   :config (fn []
             (let [lualine (require :lualine)]
               (lualine.setup
-                {:options {:theme "kanagawa"
+                {:options {:theme "tokyonight"
                            :icons_enabled true
                            :global_status true
                            :section_separators ["" ""]

@@ -21,11 +21,21 @@
       ; else
       "")))
 
+
 [{1 :nvim-lualine/lualine.nvim
   :config (fn []
-            (let [lualine (require :lualine)]
+            (let [lualine (require :lualine)
+                  lackluster-lualine (require :lualine.themes.lackluster)]
+
+              (set lackluster-lualine.normal.c.bg "#000000")
+              (set lackluster-lualine.insert.c.bg "#000000")
+              (set lackluster-lualine.visual.c.bg "#000000")
+              (set lackluster-lualine.replace.c.bg "#000000")
+              (set lackluster-lualine.command.c.bg "#000000")
+              (set lackluster-lualine.inactive.c.bg "#000000")
+
               (lualine.setup
-                {:options {:theme "tokyonight"
+                {:options {:theme lackluster-lualine
                            :icons_enabled true
                            :global_status true
                            :section_separators ["" ""]
@@ -35,7 +45,7 @@
                                                 :DiffviewFileHistory]}
                  :extensions [:fugitive
                               :fzf
-                              :neo-tree]
+                              :nvim-tree]
                  :sections {:lualine_b []
                             :lualine_c [["FugitiveHead"]
                                         {1 :filename

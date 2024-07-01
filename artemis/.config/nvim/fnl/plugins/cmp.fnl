@@ -3,14 +3,16 @@
    :conjure "conj"
    :nvim_lsp "lsp"
    :vsnip "vsnp"
-   :luasnip "lsnp"})
+   :luasnip "lsnp"
+   :volar "volar"})
 
 (local cmp-srcs
   [{:name :nvim_lsp}
    {:name :conjure}
    {:name :buffer}
    {:name :vsnip}
-   {:name :luasnip}])
+   {:name :luasnip}
+   {:name :volar}])
 
 (fn has-words-before []
   (let [(line col) (unpack (vim.api.nvim_win_get_cursor 0))]

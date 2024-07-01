@@ -18,4 +18,5 @@
                                     :lua
                                     :markdown
                                     :nix
-                                    :yaml]})))}]
+                                    :yaml
+                                    :vue]})))}]

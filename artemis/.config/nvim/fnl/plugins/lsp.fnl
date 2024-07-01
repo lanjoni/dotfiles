@@ -97,11 +97,22 @@
                                :before_init before_init
                                :capabilities capabilities})
 
+              ;; Ruby
+              (lsp.rubocop.setup {})
+
               ;; TypeScript
               (lsp.tsserver.setup {:on_attach on_attach
                                    :handlers handlers
                                    :before_init before_init
                                    :capabilities capabilities})
+
+              ;; Vue
+              (lsp.volar.setup {:on_attach on_attach
+                                :handlers handlers
+                                :before_init before_init
+                                :capabilities capabilities
+                                :init_options {:typescript {:tsdk "/Users/guto/.local/share/nvm/v20.11.1/lib/node_modules/typescript/lib"}}
+                                :cmd ["vue-language-server" "--stdio"]})
 
               ;; html / css / json
               (lsp.cssls.setup {:on_attach on_attach

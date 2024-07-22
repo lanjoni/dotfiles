@@ -5,6 +5,6 @@ local function _1_()
 end
 local function _2_()
   local mason_lspconfig = require("mason-lspconfig")
-  return mason_lspconfig.setup({ensure_installed = {"clojure_lsp", "gopls", "tsserver", "cssls", "html", "jsonls", "lua_ls", "elixirls", "elp", "fennel_language_server"}})
+  return mason_lspconfig.setup({ensure_installed = {"clojure_lsp", "cssls", "elixirls", "elp", "fennel_language_server", "gopls", "html", "jsonls", "lua_ls", "tsserver"}})
 end
 return {{"williamboman/mason.nvim", config = _1_, lazy = false}, {"williamboman/mason-lspconfig.nvim", config = _2_, lazy = false}}

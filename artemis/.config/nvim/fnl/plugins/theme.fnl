@@ -1,4 +1,4 @@
-[{1 :slugbyte/lackluster.nvim
+[{1 :slugbyte/lackluster.nvim ;; :lanjoni/darkerbones.nvim
   :lazy false
   :priority 1000
   :dependencies [:rktjmp/lush.nvim
@@ -8,5 +8,7 @@
               (lackluster.setup {:tweak_background {:normal "#000000"
                                                     :telescope "#000000"
                                                     :menu "#000000"
-                                                    :popup "#000000"}}))
+                                                    :popup "#000000"
+                                                    :lualine "#000000"}
+                                                    }))
            (vim.cmd "colorscheme lackluster"))}]

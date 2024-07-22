@@ -2,7 +2,7 @@
 local function _1_()
   do
     local lackluster = require("lackluster")
-    lackluster.setup({tweak_background = {normal = "#000000", telescope = "#000000", menu = "#000000", popup = "#000000"}})
+    lackluster.setup({tweak_background = {normal = "#000000", telescope = "#000000", menu = "#000000", popup = "#000000", lualine = "#000000"}})
   end
   return vim.cmd("colorscheme lackluster")
 end

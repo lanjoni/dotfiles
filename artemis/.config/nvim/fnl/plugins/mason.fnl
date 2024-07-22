@@ -11,12 +11,12 @@
               (mason-lspconfig.setup 
                 {:ensure_installed 
                  [:clojure_lsp
-                  :gopls 
-                  :tsserver
                   :cssls
+                  :elixirls
+                  :elp
+                  :fennel_language_server
+                  :gopls 
                   :html 
                   :jsonls 
                   :lua_ls
-                  :elixirls
-                  :elp
-                  :fennel_language_server]})))}]
+                  :tsserver]})))}]

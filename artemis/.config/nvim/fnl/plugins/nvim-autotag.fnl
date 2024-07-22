@@ -1,6 +1,3 @@
-(local {: autoload} (require :nfnl.module))
-(local nvim (autoload :nvim))
-
 [{1 :windwp/nvim-ts-autotag
   :config (fn []
             (let [ts-autotag (require :nvim-ts-autotag)]

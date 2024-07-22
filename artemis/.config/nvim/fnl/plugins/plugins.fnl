@@ -1,18 +1,30 @@
 [{1 :github/copilot.vim
   :lazy false}
 
- ;; Jack-in for Clojure
+ ; jack-in for clojure
  {1 :tpope/vim-dispatch}
  {1 :clojure-vim/vim-jack-in}
  {1 :radenling/vim-dispatch-neovim}
 
- ;; Discord presence
+ ; discord presence
  {1 :andweeb/presence.nvim}
+ 
+ ; commeting code
+ {1 :numToStr/Comment.nvim
+  :opts {:toggler {:line "<leader>cc"
+                   :block "<leader>cb"}
+         :opleader {:line "<leader>cc"
+                    :block "<leader>cb"}
+         :extra {:above "<leader>cO"
+                 :below "<leader>co"
+                 :eol "<leader>cA"}}}
 
+ ; fennel indent
  {1 :bakpakin/fennel.vim
   :lazy true
   :ft [:fennel]}
- 
+
+ ; janet indent
  {1 :bakpakin/janet.vim
   :lazy true
   :ft [:janet]}]

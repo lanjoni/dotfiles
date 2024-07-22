@@ -11,6 +11,7 @@
           (nvim.set_keymap :n :<leader>fg ":lua require('telescope.builtin').live_grep()<CR>" {:noremap true})
           (nvim.set_keymap :n :<leader>fb ":lua require('telescope.builtin').buffers()<CR>" {:noremap true})
           (nvim.set_keymap :n :<leader>fh ":lua require('telescope.builtin').help_tags()<CR>" {:noremap true})
+          (nvim.set_keymap :n :<leader>fl ":lua require('telescope').extensions.flutter.commands()<CR>" {:noremap true})
           (nvim.set_keymap :n :<leader>gg ":LazyGit<CR>" {:noremap false}))
   :config (fn []
             (let [telescope (require :telescope)
@@ -33,4 +34,5 @@
                                                                       "!.git"
                                                                       "--hidden"]}}})
               (telescope.load_extension "ui-select")
-              (telescope.load_extension "lazygit")))}]
+              (telescope.load_extension "lazygit")
+              (telescope.load_extension "flutter")))}]

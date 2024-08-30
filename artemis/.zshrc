@@ -41,3 +41,6 @@ alias clj='clojure'
 
 # lazygit
 alias lg='lazygit'
+
+# datomic
+alias start-transactor-dev='~/datomic/datomic-pro-1.0.7187/bin/transactor ~/datomic/datomic-pro-1.0.7187/config/dev-transactor-template.properties'

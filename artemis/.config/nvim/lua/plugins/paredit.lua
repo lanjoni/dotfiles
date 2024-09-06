@@ -30,4 +30,4 @@ local function _9_()
   local paredit_fnl = require("nvim-paredit-fennel")
   return paredit_fnl.setup()
 end
-return {{"kylechui/nvim-surround", event = "VeryLazy", config = _2_}, {"windwp/nvim-autopairs", event = "InsertEnter", opts = {}, config = _3_}, {"julienvincent/nvim-paredit", lazy = true, ft = {"clojure", "fennel"}, config = _4_}, {"julienvincent/nvim-paredit-fennel", dependencies = {"julienvincent/nvim-paredit"}, lazy = true, ft = {"fennel"}, config = _9_}}
+return {{"gpanders/nvim-parinfer"}, {"kylechui/nvim-surround", event = "VeryLazy", config = _2_}, {"windwp/nvim-autopairs", event = "InsertEnter", opts = {}, config = _3_}, {"julienvincent/nvim-paredit", lazy = true, ft = {"clojure", "fennel"}, config = _4_}, {"julienvincent/nvim-paredit-fennel", dependencies = {"julienvincent/nvim-paredit"}, lazy = true, ft = {"fennel"}, config = _9_}}

@@ -1,7 +1,9 @@
 (local {: autoload} (require :nfnl.module))
 (local nvim (autoload :nvim))
 
-[{1 :kylechui/nvim-surround
+[{1 :gpanders/nvim-parinfer}
+ 
+ {1 :kylechui/nvim-surround
   :event "VeryLazy"
   :config (fn []
             (let [surround (require :nvim-surround)]
@@ -13,6 +15,7 @@
   :config (fn []
             (let [autopairs (require :nvim-autopairs)]
               (autopairs.setup {:enable_check_bracket_line false})))}
+
  
  {1 :julienvincent/nvim-paredit
   :lazy true

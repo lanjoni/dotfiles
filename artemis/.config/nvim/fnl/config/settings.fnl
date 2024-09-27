@@ -29,7 +29,7 @@
        ;show line and column number
        :ruler true
        ;show relative line number
-       :relativenumber true
+       :relativenumber false
        ;makes signcolumn always one column with signs and linenumber
        :signcolumn "number"}]
   (each [option value (pairs options)]

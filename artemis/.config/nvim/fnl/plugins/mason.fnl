@@ -12,11 +12,7 @@
                 {:ensure_installed 
                  [:clojure_lsp
                   :cssls
-                  :elixirls
-                  :elp
                   :fennel_language_server
-                  :gopls 
                   :html 
                   :jsonls 
-                  :lua_ls
-                  :tsserver]})))}]
+                  :lua_ls]})))}]

@@ -1,7 +1,8 @@
 (local {: autoload} (require :nfnl.module))
 (local nvim (autoload :nvim))
 
-[{1 :gpanders/nvim-parinfer}
+[{1 :gpanders/nvim-parinfer
+  :lazy true}
  
  {1 :kylechui/nvim-surround
   :event "VeryLazy"

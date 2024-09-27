@@ -78,41 +78,11 @@
                                                  :before_init before_init
                                                  :capabilities capabilities})
 
-              ;; Elixir
-              (lsp.elixirls.setup {:on_attach on_attach
-                                   :handlers handlers
-                                   :before_init before_init
-                                   :capabilities capabilities
-                                   :cmd ["/opt/homebrew/bin/elixir-ls"]})
-
-              ;; Erlang
-              (lsp.elp.setup {:on_attach on_attach
-                              :handlers handlers
-                              :before_init before_init
-                              :capabilities capabilities})
-
-              ;; Go 
-              (lsp.gopls.setup {:on_attach on_attach
-                               :handlers handlers
-                               :before_init before_init
-                               :capabilities capabilities})
-
-              ;; Ruby
-              (lsp.rubocop.setup {})
-
-              ;; TypeScript
-              (lsp.tsserver.setup {:on_attach on_attach
-                                   :handlers handlers
-                                   :before_init before_init
-                                   :capabilities capabilities})
-
-              ;; Vue
-              (lsp.volar.setup {:on_attach on_attach
-                                :handlers handlers
-                                :before_init before_init
-                                :capabilities capabilities
-                                :init_options {:typescript {:tsdk "/Users/guto/.local/share/nvm/v20.11.1/lib/node_modules/typescript/lib"}}
-                                :cmd ["vue-language-server" "--stdio"]})
+              ;; Markdown
+              (lsp.markdown_oxide.setup {:on_attach on_attach
+                                         :handlers handlers
+                                         :before_init before_init
+                                         :capabilities capabilities})
 
               ;; html / css / json
               (lsp.cssls.setup {:on_attach on_attach

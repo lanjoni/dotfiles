@@ -1,2 +1,0 @@
--- [nfnl] Compiled from fnl/plugins/plugins.fnl by https://github.com/Olical/nfnl, do not edit.
-return {{"github/copilot.vim", lazy = false}, {"tpope/vim-dispatch"}, {"clojure-vim/vim-jack-in"}, {"radenling/vim-dispatch-neovim"}, {"tpope/vim-fugitive"}, {"kdheepak/lazygit.nvim"}, {"andweeb/presence.nvim"}, {"williamboman/mason.nvim", lazy = false}, {"williamboman/mason-lspconfig.nvim", lazy = false}, {"bakpakin/fennel.vim", lazy = true, ft = {"fennel"}}}

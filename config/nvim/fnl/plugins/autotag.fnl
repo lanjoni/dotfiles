@@ -1,0 +1,6 @@
+[{1 :windwp/nvim-ts-autotag
+  :config (fn []
+            (let [ts-autotag (require :nvim-ts-autotag)]
+              (ts-autotag.setup {:opts {:enable_close true
+                                        :enable_close_on_slash false
+                                        :enable_rename true}})))}]

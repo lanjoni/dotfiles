@@ -1,17 +1,33 @@
 # dotfiles
 
-To install these dotfiles and automatically symlink with your home folder, please install [babashka](https://github.com/babashka/babashka) and run `bb install.clj <system>`.
+These are my dotfiles, the *coolest* ones you'll ever see.
 
-### Systems
+![screenshot from workflow](docs/screenshot.png)
+> *How my setup looks like currently (macOS + yabai + neovim)*
+
+## Config
+I have some configurations provided for mac and linux (because I use both), so:
 - `artemis`: macbook
-- `turing`: desktop PC
+- `turing`: desktop with linux (arch)
 
-### Editor
-
-Neovim configuration inspired by [cajus-nfnl](https://github.com/rafaeldelboni/cajus-nfnl) with [Fennel](https://fennel-lang.org/)!
-
+## Quickstart
+- If you're using macOS:
+  - Install [Homebrew](https://brew.sh/)
+  - Install some Nerd Fonts (Monaco, Fira Code and JetBrains Mono for example)
+  - Start using configuration files from `config` and `artemis` directories
+- If you're using linux:
+  - Install some Nerd Fonts (Monaco, Fira Code and JetBrains Mono for example)
+  - Start using configuration files from `config` and `turing` directories
+ 
 ### Shell
+I'm using [fish](https://fishshell.com/) but in future I will migrate everything to zsh to have more practicality. If you want to use my fish configuration with linux you have to remove `eval "$(/opt/homebrew/bin/brew shellenv)"` from your `~/.config/fish/config.fish`!
 
-I'm using [fish](https://fishshell.com/) as my shell. It's a friendly shell, I feel faster than zsh and easier to customize than bash.
+Anyway zsh is using [Oh My Zsh](https://ohmyz.sh/), so if you want to use it you have to install with `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`.
 
-For mac, just add `eval "$(/opt/homebrew/bin/brew shellenv)"` to your `~/.config/fish/config.fish` to load brew packages.
+## Notable stuff
+ - [Nvim configuration with nfnl/fennel](https://github.com/lanjoni/dotfiles/tree/master/config/nvim)
+   - [Extensive Documentation about this](https://github.com/rafaeldelboni/cajus-nfnl)
+
+## License
+This is free and unencumbered software released into the public domain.  
+For more information, please refer to <http://unlicense.org>

@@ -31,7 +31,9 @@
        ;show relative line number
        :relativenumber false
        ;makes signcolumn always one column with signs and linenumber
-       :signcolumn "number"}]
+       :signcolumn "yes:1"
+       ;show status column
+       :statuscolumn "%=%l %s"}]
   (each [option value (pairs options)]
     (core.assoc nvim.o option value)))
 

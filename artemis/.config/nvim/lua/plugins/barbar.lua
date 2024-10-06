@@ -4,7 +4,7 @@ local autoload = _local_1_["autoload"]
 local nvim = autoload("nvim")
 local function _2_()
   local barbar = require("barbar")
-  return barbar.setup({sidebar_filetypes = {NvimTree = true}})
+  return barbar.setup({auto_hide = 20, sidebar_filetypes = {NvimTree = true}})
 end
 local function _3_()
   vim.g.barbar_auto_setup = false

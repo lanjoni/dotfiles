@@ -114,6 +114,24 @@
   :lazy false
   :priority 1000}
 
+ {1 :maxmx03/solarized.nvim
+  :lazy false
+  :priority 1000}
+
+ {1 :raphamorim/lucario
+  :lazy false
+  :priority 1000}
+
+ {1 :miikanissi/modus-themes.nvim
+  :lazy false
+  :priority 1000}
+
+ {1 :AlexvZyl/nordic.nvim
+  :lazy false 
+  :priority 1000
+  :dependencies [:rktjmp/lush.nvim
+                 :nvim-tree/nvim-web-devicons]}
+
  {1 :loctvl842/monokai-pro.nvim 
   :lazy false 
   :priority 1000

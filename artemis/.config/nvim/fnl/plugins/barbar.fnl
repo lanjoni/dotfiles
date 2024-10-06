@@ -7,7 +7,8 @@
                  :nvim-tree/nvim-web-devicons]
   :config (fn []
             (let [barbar (require :barbar)]
-              (barbar.setup {:sidebar_filetypes {:NvimTree true}})))
+              (barbar.setup {:auto_hide 20
+                             :sidebar_filetypes {:NvimTree true}})))
   :init (fn [] 
           (set vim.g.barbar_auto_setup false)
 

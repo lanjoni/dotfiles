@@ -16,6 +16,10 @@
 (define-signs "Diagnostic")
 
 [{1 :neovim/nvim-lspconfig
+  :init (fn []
+          (vim.api.nvim_create_autocmd :BufWritePre {: buffer
+                                                     :callback (fn []
+                                                                 (vim.lsp.buf.format {:async false}))}))
   :config (fn []
             (let [lsp (require :lspconfig)
                   cmplsp (require :cmp_nvim_lsp)

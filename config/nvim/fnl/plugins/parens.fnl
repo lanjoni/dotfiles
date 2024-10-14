@@ -152,12 +152,4 @@
                                           :mode [:o :v]
                                           :repeatable false}}
 
-                              :use_default_keys true})))}
-
- {1 :julienvincent/nvim-paredit-fennel
-  :dependencies [:julienvincent/nvim-paredit]
-  :lazy true
-  :ft [:fennel]
-  :config (fn []
-            (let [paredit-fnl (require :nvim-paredit-fennel)]
-              (paredit-fnl.setup)))}]
+                              :use_default_keys true})))}]

@@ -2,6 +2,16 @@
   :lazy false
   :priority 1000}
 
+ {1 :crispgm/nord-vim
+  :lazy false
+  :priority 1000}
+
+ {1 :sonph/onehalf
+  :lazy false
+  :priority 1000
+  :config (fn []
+           (vim.opt.rtp:append (.. (vim.fn.stdpath :data) :/lazy/onehalf/vim)))}
+
  {1 :rose-pine/neovim
   :name "rose-pine"
   :lazy false 

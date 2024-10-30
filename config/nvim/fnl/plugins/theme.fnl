@@ -6,6 +6,10 @@
   :lazy false
   :priority 1000}
 
+ {1 :ramojus/mellifluous.nvim
+  :lazy false
+  :priority 1000}
+
  {1 :sonph/onehalf
   :lazy false
   :priority 1000

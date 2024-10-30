@@ -10,6 +10,8 @@
        :tabstop 2
        :shiftwidth 2
        :softtabstop 2
+       ;; remove wrap 
+       :wrap false
        ;; settings needed for compe autocompletion
        :completeopt "menuone,noselect"
        ;; disable swapfile

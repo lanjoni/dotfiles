@@ -54,8 +54,8 @@ local function _4_()
   lsp.lua_ls.setup({settings = {Lua = {diagnostics = {globals = {"vim", "nvim"}}}}})
   lsp.fennel_language_server.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
   lsp.markdown_oxide.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
-  lsp.cssls.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities, cmd = {"css-languageserver", "--stdio"}})
-  lsp.html.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities, cmd = {"html-languageserver", "--stdio"}})
-  return lsp.jsonls.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities, cmd = {"json-languageserver", "--stdio"}})
+  lsp.cssls.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities, cmd = {"vscode-css-language-server", "--stdio"}})
+  lsp.html.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities, cmd = {"vscode-html-language-server", "--stdio"}})
+  return lsp.jsonls.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities, cmd = {"vscode-json-language-server", "--stdio"}})
 end
 return {{"neovim/nvim-lspconfig", init = _2_, config = _4_}}

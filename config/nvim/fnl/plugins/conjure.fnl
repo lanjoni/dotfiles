@@ -13,7 +13,7 @@
           (set nvim.g.conjure#client#clojure#nrepl#eval#auto_require true)
           (set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#enabled false)
           (set nvim.g.conjure#client#clojure#nrepl#test#current_form_names ["deftest" "defflow" "defspec" "describe"])
-          
+
           (vim.api.nvim_create_autocmd [:BufWinEnter]
                                               {:callback (fn []
                                                            (local buffer

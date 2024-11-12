@@ -14,7 +14,7 @@
             (let [autopairs (require :nvim-autopairs)]
               (autopairs.setup {:enable_check_bracket_line false})))}
 
- 
+
  {1 :julienvincent/nvim-paredit
   :lazy true
   :ft [:clojure :fennel]

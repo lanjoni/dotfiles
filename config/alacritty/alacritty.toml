@@ -1,8 +1,6 @@
-import = [
-  "~/.config/alacritty/themes/custom/lackdark.toml"
+general.import = [
+  "~/.config/alacritty/custom/zenwritten_dark.toml"
 ]
-
-live_config_reload = true
 
 [bell]
 animation = "EaseOutExpo"
@@ -23,23 +21,35 @@ print_events = false
 render_timer = false
 
 [font]
-size = 15
+size = 13
+
+# [font.normal]
+# family = "MesloLGM Nerd Font Mono"
+# style = "Regular"
+# 
+# [font.bold]
+# family = "MesloLGM Nerd Font Mono"
+# style = "Bold"
+# 
+# [font.italic]
+# family = "MesloLGM Nerd Font Mono"
+# style = "Italic"
 
 [font.normal]
-family = "Monaco Nerd Font"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
 
 [font.bold]
-family = "Monaco Nerd Font"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Bold"
 
 [font.italic]
-family = "Monaco Nerd Font"
+family = "JetBrainsMono Nerd Font Mono"
 style = "Italic"
 
 [font.offset]
 x = 0
-y = 0
+y = -2
 
 [font.glyph_offset]
 x = 0
@@ -591,9 +601,9 @@ multiplier = 3
 save_to_clipboard = false
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "tmux new-session"]
-program = "/bin/zsh"
+program = "/bin/bash"
 
 [window]
 decorations = "none"

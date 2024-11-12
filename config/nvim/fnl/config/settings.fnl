@@ -7,8 +7,6 @@
 (let [options
       {;; tabs is space
        :expandtab true
-       ;; color column
-       :colorcolumn "80"
        ;; tab/indent size
        :tabstop 2
        :shiftwidth 2

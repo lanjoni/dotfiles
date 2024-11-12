@@ -34,7 +34,7 @@
               (set lackluster-lualine.inactive.c.bg "#000000")
 
               (lualine.setup
-                {:options {:theme lackluster-lualine
+                {:options {:theme "zenwritten"
                            :icons_enabled true
                            :global_status true
                            :section_separators ["" ""]

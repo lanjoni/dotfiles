@@ -2,13 +2,67 @@
   :lazy false
   :priority 1000}
 
- {1 :crispgm/nord-vim
+ ; {1 :crispgm/nord-vim
+ ;  :lazy false
+ ;  :priority 1000}
+ {1 :mosaab2020/custom-nord.nvim
   :lazy false
   :priority 1000}
 
  {1 :ramojus/mellifluous.nvim
   :lazy false
   :priority 1000}
+
+ ;; idk why i like to add so much themes 
+ ;; because i always come back to the same...
+ ;; mono tone and chrome
+ ; {1 :Lokaltog/monotone.nvim
+ ;  :lazy false
+ ;  :priority 1000}
+ {1 :Lokaltog/vim-monotone
+  :lazy false
+  :priority 1000}
+ ; {1 :kdheepak/monochrome.nvim
+ ;  :lazy false
+ ;  :priority 1000}
+ {1 :fxn/vim-monochrome
+  :lazy false
+  :priority 1000}
+ {1 :ewilazarus/preto
+  :lazy false
+  :priority 1000}
+ {1 :andreasvc/vim-256noir
+  :lazy false
+  :priority 1000}
+
+{1 :darkvoid-theme/darkvoid.nvim
+  :lazy false
+  :priority 1000}
+
+ {1 :killitar/obscure.nvim
+  :lazy false
+  :priority 1000}
+{1 :mellow-theme/mellow.nvim
+  :lazy false
+  :priority 1000}
+{1 :nyoom-engineering/oxocarbon.nvim
+  :lazy false
+  :priority 1000}
+{1 :blazkowolf/gruber-darker.nvim
+  :lazy false
+  :priority 1000}
+{1 :kvrohit/rasmus.nvim
+  :lazy false
+  :priority 1000}
+{1 :dgox16/oldworld.nvim
+  :lazy false
+  :priority 1000}
+
+ {1 :zenbones-theme/zenbones.nvim
+  :lazy false
+  :priority 1000
+  :dependencies [:rktjmp/lush.nvim
+                 :nvim-tree/nvim-web-devicons]}
 
  {1 :sonph/onehalf
   :lazy false
@@ -72,9 +126,14 @@
                  :nvim-tree/nvim-web-devicons]
   :config (fn []
             (let [lackluster (require :lackluster)]
-              (lackluster.setup {:tweak_background {:normal "#000000"
+              (lackluster.setup {:tweak_highlight {"@keyword" {:bold true
+                                                               :italic true
+                                                               :overwrite true}
+                                                   "@function" {:link "@keyword"
+                                                                :overwrite true}}
+                                 :tweak_background {:normal "#000000"
                                                     :telescope "#000000"
                                                     :menu "#000000"
                                                     :popup "#000000"
                                                     :lualine "#000000"}}))
-            (vim.cmd "colorscheme lackluster"))}]
+            (vim.cmd "colorscheme zenwritten"))}]

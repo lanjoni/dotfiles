@@ -1,5 +1,5 @@
 general.import = [
-  "~/.config/alacritty/custom/zenwritten_dark.toml"
+  "~/.config/alacritty/custom/lackluster.toml"
 ]
 
 [bell]

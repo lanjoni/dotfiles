@@ -20,9 +20,9 @@ I have some configurations provided for mac and linux (because I use both), so:
   - Start using configuration files from `config` and `turing` directories
  
 ### Shell
-I'm using [fish](https://fishshell.com/) but in future I will migrate everything to zsh to have more practicality. If you want to use my fish configuration with linux you have to remove `eval "$(/opt/homebrew/bin/brew shellenv)"` from your `~/.config/fish/config.fish`!
+I'm using [zsh](https://www.zsh.org/) with [Oh My Zsh](https://ohmyz.sh/), so if you want to use it you have to install with `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`.
 
-Anyway zsh is using [Oh My Zsh](https://ohmyz.sh/), so if you want to use it you have to install with `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`.
+I also have a configuration file for [fish](https://fishshell.com/). If you want to use my fish configuration with linux you have to remove `eval "$(/opt/homebrew/bin/brew shellenv)"` from your `~/.config/fish/config.fish`!
 
 ## Notable stuff
  - [Nvim configuration with nfnl/fennel](https://github.com/lanjoni/dotfiles/tree/master/config/nvim)

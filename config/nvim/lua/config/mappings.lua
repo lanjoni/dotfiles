@@ -14,4 +14,14 @@ nvim.set_keymap("n", "<leader>h", ":nohlsearch<CR>", {noremap = false})
 nvim.set_keymap("n", "<leader>ll", ":bnext<CR>", {noremap = true})
 nvim.set_keymap("n", "<C-C-i>", ":bnext<CR>", {noremap = true})
 nvim.set_keymap("n", "<leader>hh", ":bprev<CR>", {noremap = true})
-return nvim.set_keymap("n", "<leader>k", ":bdelete<CR>", {noremap = true})
+nvim.set_keymap("n", "<leader>k", ":bdelete<CR>", {noremap = true})
+local function clear_hidden_buffers()
+  for _, buffer in pairs(vim.fn.getbufinfo()) do
+    if (buffer.hidden == 1) then
+      vim.cmd.bd(buffer.bufnr)
+    else
+    end
+  end
+  return nil
+end
+return vim.keymap.set("n", "<Leader>bd", clear_hidden_buffers, {noremap = true, silent = false})

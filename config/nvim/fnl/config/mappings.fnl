@@ -25,3 +25,10 @@
 (nvim.set_keymap :n :<C-C-i>    ":bnext<CR>" {:noremap true})
 (nvim.set_keymap :n :<leader>hh ":bprev<CR>" {:noremap true})
 (nvim.set_keymap :n :<leader>k  ":bdelete<CR>" {:noremap true})
+
+;; clear hidden buffers
+(fn clear-hidden-buffers []
+  (each [_ buffer (pairs (vim.fn.getbufinfo))]
+    (when (= buffer.hidden 1) (vim.cmd.bd buffer.bufnr))))
+
+(vim.keymap.set :n :<Leader>bd clear-hidden-buffers {:noremap true :silent false})

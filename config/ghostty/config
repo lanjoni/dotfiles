@@ -1,0 +1,17 @@
+font-size = 13
+font-family = JetBrainsMono Nerd Font Mono
+font-thicken = false
+adjust-cell-height = -2
+bold-is-bright = true
+
+cursor-style = block
+
+window-padding-x = 3
+window-padding-y = 3
+window-decoration = false
+
+copy-on-select = true
+
+command = /bin/bash -l -c tmux new-session
+
+theme = lackluster

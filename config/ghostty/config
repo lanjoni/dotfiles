@@ -2,6 +2,7 @@ font-size = 13
 font-family = JetBrainsMono Nerd Font Mono
 font-thicken = false
 adjust-cell-height = -2
+adjust-cell-width = -1
 bold-is-bright = true
 
 cursor-style = block
@@ -11,7 +12,8 @@ window-padding-y = 3
 window-decoration = false
 
 copy-on-select = true
+quit-after-last-window-closed
 
-command = /bin/bash -l -c tmux new-session
+command = /bin/bash -l -c /opt/homebrew/bin/tmux new-session
 
 theme = lackluster

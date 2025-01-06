@@ -1,5 +1,5 @@
 general.import = [
-  "~/.config/alacritty/custom/lackluster.toml"
+  "~/.config/alacritty/custom/tairiki.toml"
 ]
 
 [bell]

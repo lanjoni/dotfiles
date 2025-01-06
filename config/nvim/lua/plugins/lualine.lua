@@ -14,15 +14,19 @@ local function lsp_connection()
     return "\239\130\150"
   end
 end
-local function _3_()
-  local lualine = require("lualine")
-  local lackluster_lualine = require("lualine.themes.lackluster")
-  lackluster_lualine.normal.c.bg = "#0A0A0A"
-  lackluster_lualine.insert.c.bg = "#0A0A0A"
-  lackluster_lualine.visual.c.bg = "#0A0A0A"
-  lackluster_lualine.replace.c.bg = "#0A0A0A"
-  lackluster_lualine.command.c.bg = "#0A0A0A"
-  lackluster_lualine.inactive.c.bg = "#0A0A0A"
-  return lualine.setup({options = {theme = lackluster_lualine, icons_enabled = true, global_status = true, section_separators = {"", ""}, component_separators = "", disabled_filetypes = {"DiffviewFiles", "fzf", "DiffviewFileHistory"}}, extensions = {"fugitive", "fzf", "nvim-tree"}, sections = {lualine_b = {}, lualine_c = {{"FugitiveHead"}, {"filename", file_status = true, path = 1, shorting_target = 40}}, lualine_x = {{"diagnostics", sections = {"error", "warn", "info", "hint"}, sources = {"nvim_lsp"}}, {lsp_connection}, "location", "filetype"}, lualine_y = {"encoding"}, lualine_z = {}}, inactive_sections = {lualine_a = {}, lualine_b = {}, lualine_c = {}, lualine_x = {}, lualine_y = {}, lualine_z = {}}})
+local background = "#16161d"
+local kanagawa = {normal = {a = {bg = "#957FB8", fg = "#16161D"}, b = {bg = background, fg = "#957FB8"}, c = {bg = background, fg = "#DCD7BA"}}, insert = {a = {bg = "#76946A", fg = "#16161D"}, b = {bg = background, fg = "#76946A"}}, command = {a = {bg = "#C0A36E", fg = "#16161D"}, b = {bg = background, fg = "#C0A36E"}}, visual = {a = {bg = "#7E9CD8", fg = "#16161D"}, b = {bg = background, fg = "#7E9CD8"}}, replace = {a = {bg = "#C34043", fg = "#16161D"}, b = {bg = background, fg = "#C34043"}}, inactive = {a = {bg = "#0D1014", fg = "#7E9CD8"}, b = {bg = "#0D1014", fg = "#727169", gui = "bold"}, c = {bg = "#0D1014", fg = "#727169"}}}
+local grey14 = "#16161D"
+local grey15 = "#181820"
+local grey16 = "#16161D"
+if vim.g.kanagawa_lualine_bold then
+  for _ = mode, pairs(kanagawa) do
+    mode.a.gui = "bold"
+  end
+else
 end
-return {{"nvim-lualine/lualine.nvim", config = _3_}}
+local function _4_()
+  local lualine = require("lualine")
+  return lualine.setup({options = {theme = "tairiki", icons_enabled = true, global_status = true, section_separators = {"", ""}, component_separators = "", disabled_filetypes = {"DiffviewFiles", "fzf", "DiffviewFileHistory"}}, extensions = {"fugitive", "fzf", "nvim-tree"}, sections = {lualine_b = {}, lualine_c = {{"FugitiveHead"}, {"filename", file_status = true, path = 1, shorting_target = 40}}, lualine_x = {{"diagnostics", sections = {"error", "warn", "info", "hint"}, sources = {"nvim_lsp"}}, {lsp_connection}, "location", "filetype"}, lualine_y = {"encoding"}, lualine_z = {}}, inactive_sections = {lualine_a = {}, lualine_b = {}, lualine_c = {}, lualine_x = {}, lualine_y = {}, lualine_z = {}}})
+end
+return {{"nvim-lualine/lualine.nvim", config = _4_}}

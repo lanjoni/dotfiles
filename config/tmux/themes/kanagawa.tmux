@@ -1,21 +1,21 @@
-# TAIRIKI THEME BEGIN
-color_tairiki="#c5c8c6"
-color_black="#151515"
-color_1="#1D2021"
+# KANAGAWA THEME BEGIN
+color_kanagawa="#dcd7ba"
+color_black="#0D1014"
+color_1="#957FB8"
 color_2="#1D2021"
-color_3="#696969"
-color_4="#A89984"
+color_3="#16161D"
+color_4="#16161D"
 color_5="#cccccc"
 
 set-option -g clock-mode-style              24 
 set-option -g clock-mode-colour             "$color_4"
 
-set-option -g status-fg                     "$color_tairiki"
+set-option -g status-fg                     "$color_kanagawa"
 set-option -g status-bg                     "$color_black"
 set-option -g copy-mode-current-match-style "fg=$color_1,bg=$color_5"
 set-option -g copy-mode-match-style         "fg=$color_1,bg=$color_5"
-set-option -g menu-selected-style           "fg=$color_1,bg=$color_tairiki"
-set-option -g menu-style                    "fg=$color_tairiki,bg=$color_1"
+set-option -g menu-selected-style           "fg=$color_1,bg=$color_kanagawa"
+set-option -g menu-style                    "fg=$color_kanagawa,bg=$color_1"
 set-option -g message-style                 "bg=$color_4,fg=$color_1"
 set-option -g message-command-style         "bg=$color_4,fg=$color_2"
 set-option -g mode-style                    "bg=$color_5,fg=$color_1"
@@ -36,4 +36,4 @@ set-option -g window-status-current-format '#{?#{==:#W,},#I,#I:#W}'
 
 set-option -g status-right                 ' #{?#{>:#{server_sessions},1},(#{session_name}),} %d/%m #(date +"%H:%M") '
 set-option -g status-left                  ' '
-# TAIRIKI THEME END
+# KANAGAWA THEME END

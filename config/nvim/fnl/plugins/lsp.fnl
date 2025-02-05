@@ -19,7 +19,8 @@
   :init (fn []
           (vim.api.nvim_create_autocmd :BufWritePre {: buffer
                                                      :callback (fn []
-                                                                 (vim.lsp.buf.format {:async false}))}))
+                                                                 (when (not= vim.bo.filetype "markdown")
+                                                                   (vim.lsp.buf.format {:async false})))}))
   :config (fn []
             (let [lsp (require :lspconfig)
                   cmplsp (require :cmp_nvim_lsp)

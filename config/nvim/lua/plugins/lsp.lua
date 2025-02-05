@@ -15,23 +15,27 @@ end
 define_signs("Diagnostic")
 local function _2_()
   local function _3_()
-    return vim.lsp.buf.format({async = false})
+    if (vim.bo.filetype ~= "markdown") then
+      return vim.lsp.buf.format({async = false})
+    else
+      return nil
+    end
   end
   return vim.api.nvim_create_autocmd("BufWritePre", {buffer = buffer, callback = _3_})
 end
-local function _4_()
+local function _5_()
   local lsp = require("lspconfig")
   local cmplsp = require("cmp_nvim_lsp")
   local handlers = {["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {severity_sort = true, update_in_insert = true, underline = true, virtual_text = true}), ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "single"}), ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = "single"})}
   local capabilities = cmplsp.default_capabilities()
   local before_init
-  local function _5_(params)
+  local function _6_(params)
     params.workDoneToken = "1"
     return nil
   end
-  before_init = _5_
+  before_init = _6_
   local on_attach
-  local function _6_(client, bufnr)
+  local function _7_(client, bufnr)
     nvim.buf_set_keymap(bufnr, "n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", {noremap = true})
     nvim.buf_set_keymap(bufnr, "n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", {noremap = true})
     nvim.buf_set_keymap(bufnr, "n", "<leader>ld", "<Cmd>lua vim.lsp.buf.declaration()<CR>", {noremap = true})
@@ -49,7 +53,7 @@ local function _4_()
     nvim.buf_set_keymap(bufnr, "n", "<leader>lr", ":lua require('telescope.builtin').lsp_references()<cr>", {noremap = true})
     return nvim.buf_set_keymap(bufnr, "n", "<leader>li", ":lua require('telescope.builtin').lsp_implementations()<cr>", {noremap = true})
   end
-  on_attach = _6_
+  on_attach = _7_
   lsp.clojure_lsp.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
   lsp.lua_ls.setup({settings = {Lua = {diagnostics = {globals = {"vim", "nvim"}}}}})
   lsp.fennel_language_server.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities})
@@ -59,4 +63,4 @@ local function _4_()
   lsp.html.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities, cmd = {"vscode-html-language-server", "--stdio"}})
   return lsp.jsonls.setup({on_attach = on_attach, handlers = handlers, before_init = before_init, capabilities = capabilities, cmd = {"vscode-json-language-server", "--stdio"}})
 end
-return {{"neovim/nvim-lspconfig", init = _2_, config = _4_}}
+return {{"neovim/nvim-lspconfig", init = _2_, config = _5_}}

@@ -1,6 +1,6 @@
 [{1 :gpanders/nvim-parinfer
   :lazy true}
- 
+
  {1 :kylechui/nvim-surround
   :event "VeryLazy"
   :config (fn []

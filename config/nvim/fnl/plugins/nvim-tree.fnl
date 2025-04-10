@@ -31,6 +31,6 @@
                                              :folder {:default "" :open ""}}}}
                  :filters {:custom ["^\\.git$"]}})))
   :init (fn []
-          (nvim.ex.hi "NvimTreeSpecialFile ctermfg=7 guifg=#c6c6c6")
-          (nvim.set_keymap :n :<leader>n ":NvimTreeToggle<CR>" {:noremap true})
-          (nvim.set_keymap :n :<c-n> ":NvimTreeFindFile<CR>" {:noremap true}))}]
+          (vim.api.nvim_set_hl 0 :NvimTreeSpecialFile {:fg "#c6c6c6"})
+          (vim.keymap.set :n :<leader>n ":NvimTreeToggle<CR>" {:noremap true})
+          (vim.keymap.set :n :<c-n> ":NvimTreeFindFile<CR>" {:noremap true}))}]

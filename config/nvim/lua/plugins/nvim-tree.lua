@@ -20,8 +20,8 @@ local function _2_()
   return tree.setup({on_attach = on_attach, sort_by = "case_sensitive", view = {adaptive_size = true}, renderer = {group_empty = true, indent_markers = {enable = false}, icons = {git_placement = "after", glyphs = {bookmark = "\239\145\186", folder = {default = "\239\132\148", open = "\239\132\149"}}, webdev_colors = false}}, filters = {custom = {"^\\.git$"}}})
 end
 local function _4_()
-  nvim.ex.hi("NvimTreeSpecialFile ctermfg=7 guifg=#c6c6c6")
-  nvim.set_keymap("n", "<leader>n", ":NvimTreeToggle<CR>", {noremap = true})
-  return nvim.set_keymap("n", "<c-n>", ":NvimTreeFindFile<CR>", {noremap = true})
+  vim.api.nvim_set_hl(0, "NvimTreeSpecialFile", {fg = "#c6c6c6"})
+  vim.keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>", {noremap = true})
+  return vim.keymap.set("n", "<c-n>", ":NvimTreeFindFile<CR>", {noremap = true})
 end
 return {{"nvim-tree/nvim-tree.lua", priority = 1000, dependencies = {"nvim-tree/nvim-web-devicons", "stevearc/dressing.nvim"}, config = _2_, init = _4_, lazy = false}}

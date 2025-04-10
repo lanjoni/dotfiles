@@ -11,5 +11,6 @@
               (mason-lspconfig.setup 
                 {:ensure_installed 
                  [:clojure_lsp
+                  :gopls
                   :fennel_language_server
                   :lua_ls]})))}]

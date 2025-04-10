@@ -1,7 +1,24 @@
 (local {: autoload} (require :nfnl.module))
-(local nvim (autoload :nvim))
 (local str (autoload :nfnl.string))
 (local core (autoload :nfnl.core))
+
+;; refresh changed content
+(vim.api.nvim_create_autocmd
+  [:FocusGained :BufEnter]
+  {:pattern [:*]
+   :command "checktime"})
+
+;; rust tabsize
+(vim.api.nvim_create_autocmd
+  [:FileType]
+  {:pattern [:rust]
+   :command "setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab"})
+
+;; go tabsize
+(vim.api.nvim_create_autocmd
+  [:FileType]
+  {:pattern [:go]
+   :command "setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab"})
 
 ;; sets a nvim global options
 (let [options
@@ -11,6 +28,7 @@
        :tabstop 2
        :shiftwidth 2
        :softtabstop 2
+       :colorcolumn "120"
        ;; remove wrap
        :wrap false
        ;; settings needed for compe autocompletion
@@ -51,6 +69,6 @@
        ;; show status column
        :statuscolumn "%=%l %s"}]
   (each [option value (pairs options)]
-    (core.assoc nvim.o option value)))
+    (core.assoc vim.o option value)))
 
 {}

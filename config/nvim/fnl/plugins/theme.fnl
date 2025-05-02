@@ -33,7 +33,7 @@
                  :overrides (fn []
                               {:Normal {:bg "#0D1014" :fg "#DCD7BA"}})
                  :theme "wave"
-                 :background {:dark "wave" :light "lotus"}})))} 
+                 :background {:dark "wave" :light "lotus"}})))}
 
 {1 :deparr/tairiki.nvim
   :lazy false

@@ -1,4 +1,4 @@
--- [nfnl] Compiled from fnl/plugins/baleia.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] fnl/plugins/baleia.fnl
 local function _1_()
   vim.g.conjure_baleia = require("baleia").setup({line_starts_at = 3})
   local augroup = vim.api.nvim_create_augroup("ConjureBaleia", {clear = true})

@@ -1,4 +1,4 @@
--- [nfnl] Compiled from fnl/plugins/theme.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] fnl/plugins/theme.fnl
 local function _1_()
   local rose_pine = require("rose-pine")
   return rose_pine.setup({variant = "moon", styles = {transparency = true, italic = false}})

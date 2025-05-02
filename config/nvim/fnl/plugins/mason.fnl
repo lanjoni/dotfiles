@@ -10,7 +10,7 @@
             (let [mason-lspconfig (require :mason-lspconfig)]
               (mason-lspconfig.setup 
                 {:ensure_installed 
-                 [:clojure_lsp
+                 ["clojure_lsp@2025.03.07-17.42.36"
                   :gopls
                   :fennel_language_server
                   :lua_ls]})))}]

@@ -65,6 +65,7 @@
                                 :handlers handlers
                                 :before_init before_init
                                 :capabilities capabilities
+                                :settings {:css {:lint {:unknownAtRules :ignore}}}
                                 :cmd ["vscode-css-language-server" "--stdio"]})
 
               (lsp.html.setup {:on_attach on_attach

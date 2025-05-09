@@ -1,14 +1,6 @@
 [{1 :github/copilot.vim
   :lazy false}
 
- ;; jack-in for clojure
- {1 :tpope/vim-dispatch}
- {1 :clojure-vim/vim-jack-in}
- {1 :radenling/vim-dispatch-neovim}
-
- ;; discord presence
- ;; {1 :andweeb/presence.nvim}
-
  ;; git
  {1 :tpope/vim-fugitive}
  {1 :lewis6991/gitsigns.nvim

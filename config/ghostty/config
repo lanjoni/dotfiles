@@ -1,19 +1,42 @@
 font-size = 13
 font-family = JetBrainsMono Nerd Font Mono
 font-thicken = false
+font-feature = -calt
 adjust-cell-height = -2
 adjust-cell-width = -1
 bold-is-bright = true
 
+theme = tairiki
+macos-titlebar-proxy-icon = hidden
+
 cursor-style = block
+mouse-hide-while-typing = true
+
+copy-on-select = clipboard
+quit-after-last-window-closed = true
 
 window-padding-x = 3
 window-padding-y = 3
-window-decoration = false
+# that's needed because maximize = true is not working
+window-width = 350
+window-height = 90
 
-copy-on-select = true
-quit-after-last-window-closed = true
+window-save-state = always
 
-command = /bin/bash -l -c /opt/homebrew/bin/tmux new-session
+keybind = ctrl+n=new_window
+keybind = ctrl+f>c=new_tab
 
-theme = lackluster
+keybind = shift+tab=next_tab
+keybind = ctrl+tab=previous_tab
+keybind = super+r=reload_config
+
+keybind = ctrl+w>h=goto_split:left
+keybind = ctrl+w>j=goto_split:bottom
+keybind = ctrl+w>k=goto_split:top
+keybind = ctrl+w>l=goto_split:right
+
+keybind = ctrl+f>h=new_split:left
+keybind = ctrl+f>j=new_split:down
+keybind = ctrl+f>k=new_split:up
+keybind = ctrl+f>l=new_split:right
+keybind = ctrl+f>t=new_split:right

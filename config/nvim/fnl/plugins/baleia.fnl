@@ -11,4 +11,4 @@
                                                 {:bang true})
               (vim.api.nvim_create_user_command :BaleiaLogs
                                                 conjure-baleia.logger.show
-                                                {:bang true}))) }]
+                                                {:bang true})))}]

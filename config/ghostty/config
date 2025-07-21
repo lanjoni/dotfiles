@@ -1,4 +1,4 @@
-font-size = 13
+font-size = 15
 font-family = JetBrainsMono Nerd Font Mono
 font-thicken = false
 font-feature = -calt
@@ -19,8 +19,8 @@ mouse-hide-while-typing = true
 copy-on-select = clipboard
 quit-after-last-window-closed = true
 
-window-width = 338
-window-height = 84
+window-width = 400
+window-height = 99
 
 window-save-state = always
 

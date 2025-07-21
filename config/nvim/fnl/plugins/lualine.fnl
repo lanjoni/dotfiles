@@ -35,7 +35,8 @@
                                                 :DiffviewFileHistory]}
                  :extensions [:fugitive
                               :fzf
-                              :nvim-tree]
+                              :nvim-tree
+                              :avante]
                  :sections {:lualine_b []
                             :lualine_c [["FugitiveHead"]
                                         {1 :filename

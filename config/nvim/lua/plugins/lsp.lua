@@ -2,7 +2,7 @@
 vim.diagnostic.config({signs = {text = {[vim.diagnostic.severity.ERROR] = "\239\129\151", [vim.diagnostic.severity.WARN] = "\239\129\177", [vim.diagnostic.severity.INFO] = "\239\129\154", [vim.diagnostic.severity.HINT] = "\239\129\153"}}, virtual_text = true})
 local function _1_()
   local function _2_()
-    if (vim.bo.filetype ~= "markdown") then
+    if ((vim.bo.filetype ~= "markdown") and (vim.bo.filetype ~= "css")) then
       return vim.lsp.buf.format({async = false})
     else
       return nil
@@ -31,6 +31,9 @@ local function _4_()
   vim.lsp.config("fennel_language_server", {settings = {fennel = {diagnostics = {globals = {"vim", "nvim"}}}}})
   vim.lsp.enable("fennel_language_server")
   vim.lsp.enable("gopls")
+  vim.lsp.enable("zls")
+  vim.lsp.enable("rust_analyzer")
+  vim.lsp.config("ts_ls", {on_attach = on_attach, handlers = handlers, before_init = before_init})
   vim.lsp.enable("ts_ls")
   vim.lsp.enable("markdown_oxide")
   vim.lsp.config("cssls", {settings = {css = {lint = {unknownAtRules = "ignore"}}}, cmd = {"vscode-css-language-server", "--stdio"}})

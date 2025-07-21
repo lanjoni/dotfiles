@@ -1,7 +1,4 @@
-[{1 :github/copilot.vim
-  :lazy false}
-
- ;; git
+[;; git
  {1 :tpope/vim-fugitive}
  {1 :lewis6991/gitsigns.nvim
   :config (fn []

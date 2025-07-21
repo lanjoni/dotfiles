@@ -9,7 +9,8 @@
   :init (fn []
           (vim.api.nvim_create_autocmd :BufWritePre {: buffer
                                                      :callback (fn []
-                                                                 (when (not= vim.bo.filetype "markdown")
+                                                                 (when (and (not= vim.bo.filetype "markdown")
+                                                                            (not= vim.bo.filetype "css"))
                                                                    (vim.lsp.buf.format {:async false})))}))
   :config (fn []
             (let [config-lsp (require :config.lsp)
@@ -45,7 +46,16 @@
               ;; Go
               (vim.lsp.enable :gopls)
 
+              ;; Zig
+              (vim.lsp.enable :zls)
+
+              ;; Rust
+              (vim.lsp.enable :rust_analyzer)
+
               ;; JavaScript and TypeScript
+              (vim.lsp.config :ts_ls {:on_attach on_attach
+                                      :handlers handlers
+                                      :before_init before_init})
               (vim.lsp.enable :ts_ls)
 
               ;; Markdown

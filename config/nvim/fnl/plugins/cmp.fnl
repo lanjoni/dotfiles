@@ -8,8 +8,7 @@
   :dependencies [:rafamadriz/friendly-snippets
                  :PaterJason/cmp-conjure
                  :mikavilpas/blink-ripgrep.nvim
-                 :L3MON4D3/LuaSnip
-                 :Kaiser-Yang/blink-cmp-avante]
+                 :L3MON4D3/LuaSnip]
   :opts {:enabled (fn []
                     (let [filetype vim.bo.filetype
                           buftype vim.bo.buftype
@@ -37,13 +36,10 @@
                                               [:source_name]]}}}
          :snippets {:preset :luasnip}
          :cmdline {:enabled false}
-         :sources {:default [:lsp :path :snippets :buffer :conjure :ripgrep :avante]
+         :sources {:default [:lsp :path :snippets :buffer :conjure :ripgrep]
                    :providers {:conjure {:name :conjure
                                          :module :blink.compat.source
                                          :score_offset -3}
                                :ripgrep {:module :blink-ripgrep
                                          :name :Ripgrep
-                                         :score_offset -3}
-                               :avante {:module :blink-cmp-avante
-                                        :name :Avante
-                                        :score_offset -3}}}}}]
+                                         :score_offset -3}}}}}]

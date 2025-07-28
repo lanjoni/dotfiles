@@ -15,6 +15,9 @@
                  :below "<leader>co"
                  :eol "<leader>cA"}}}
 
+  ;; reasonml
+ {1 :reasonml-editor/vim-reason-plus}
+
  ;; fennel indent
  {1 :bakpakin/fennel.vim
   :lazy true

@@ -52,10 +52,15 @@
               ;; Rust
               (vim.lsp.enable :rust_analyzer)
 
+              ;; OCaml
+              (vim.lsp.config :ocamllsp {:filetypes ["ocaml" "reason" "merlin"]})
+              (vim.lsp.enable :ocamllsp)
+
               ;; JavaScript and TypeScript
               (vim.lsp.config :ts_ls {:on_attach on_attach
                                       :handlers handlers
-                                      :before_init before_init})
+                                      :before_init before_init
+                                      :filetypes ["javascript" "javascriptreact" "typescript" "typescriptreact"]})
               (vim.lsp.enable :ts_ls)
 
               ;; Markdown

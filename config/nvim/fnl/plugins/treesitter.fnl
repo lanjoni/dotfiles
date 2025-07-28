@@ -19,6 +19,7 @@
                                     :lua
                                     :markdown
                                     :nix
+                                    :ocaml
                                     :rust
                                     :yaml
                                     :zig]})))}]

@@ -21,6 +21,7 @@ quit-after-last-window-closed = true
 
 window-width = 400
 window-height = 99
+window-colorspace = display-p3
 
 window-save-state = always
 
@@ -40,3 +41,4 @@ keybind = ctrl+f>j=new_split:down
 keybind = ctrl+f>k=new_split:up
 keybind = ctrl+f>l=new_split:right
 keybind = ctrl+f>t=new_split:right
+keybind = shift+enter=text:\n

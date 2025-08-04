@@ -3,7 +3,7 @@
 These are my dotfiles, the *coolest* ones you'll ever see.
 
 ![screenshot from workflow](docs/screenshot.png)
-> *How my setup looks like currently (macOS + yabai + neovim)*
+> *How my setup looks like currently (macOS + neovim)*
 
 ## Config
 I have some configurations provided for mac and linux (because I use both), so:

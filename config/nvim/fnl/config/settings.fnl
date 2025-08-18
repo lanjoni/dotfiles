@@ -18,7 +18,7 @@
 (vim.api.nvim_create_autocmd
   [:FileType]
   {:pattern [:go]
-   :command "setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab"})
+   :command "setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab"})
 
 ;; sets a nvim global options
 (let [options

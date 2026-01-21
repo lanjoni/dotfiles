@@ -15,4 +15,4 @@ local function _1_()
   end
   return vim.api.nvim_create_autocmd({"BufWinEnter"}, {callback = _2_, pattern = "conjure-log-*"})
 end
-return {{"Olical/conjure", branch = "main", init = _1_}}
+return {{"Olical/conjure", version = "v4.56.0", branch = "main", init = _1_}}

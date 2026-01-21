@@ -9,6 +9,7 @@
                                     :clojure
                                     :commonlisp
                                     :dockerfile
+                                    :elixir
                                     :fennel
                                     :go
                                     :html

@@ -2,7 +2,7 @@
 vim.diagnostic.config({signs = {text = {[vim.diagnostic.severity.ERROR] = "\239\129\151", [vim.diagnostic.severity.WARN] = "\239\129\177", [vim.diagnostic.severity.INFO] = "\239\129\154", [vim.diagnostic.severity.HINT] = "\239\129\153"}}, virtual_text = true})
 local function _1_()
   local function _2_()
-    if ((vim.bo.filetype ~= "markdown") and (vim.bo.filetype ~= "css")) then
+    if ((vim.bo.filetype ~= "markdown") and (vim.bo.filetype ~= "css") and (vim.bo.filetype ~= "json")) then
       return vim.lsp.buf.format({async = false})
     else
       return nil
@@ -35,6 +35,8 @@ local function _4_()
   vim.lsp.enable("rust_analyzer")
   vim.lsp.config("ocamllsp", {filetypes = {"ocaml", "reason", "merlin"}})
   vim.lsp.enable("ocamllsp")
+  vim.lsp.config("elixirls", {cmd = {"elixir-ls", "--stdio"}})
+  vim.lsp.enable("elixirls")
   vim.lsp.config("ts_ls", {on_attach = on_attach, handlers = handlers, before_init = before_init, filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact"}})
   vim.lsp.enable("ts_ls")
   vim.lsp.enable("markdown_oxide")

@@ -10,8 +10,13 @@
           (vim.api.nvim_create_autocmd :BufWritePre {: buffer
                                                      :callback (fn []
                                                                  (when (and (not= vim.bo.filetype "markdown")
-                                                                            (not= vim.bo.filetype "css"))
+                                                                            (not= vim.bo.filetype "css")
+                                                                            (not= vim.bo.filetype "json"))
                                                                    (vim.lsp.buf.format {:async false})))}))
+
+
+
+
   :config (fn []
             (let [config-lsp (require :config.lsp)
                   on_attach config-lsp.on_attach
@@ -55,6 +60,10 @@
               ;; OCaml
               (vim.lsp.config :ocamllsp {:filetypes ["ocaml" "reason" "merlin"]})
               (vim.lsp.enable :ocamllsp)
+
+              ;; Elixir
+              (vim.lsp.config :elixirls {:cmd ["elixir-ls" "--stdio"]})
+              (vim.lsp.enable :elixirls)
 
               ;; JavaScript and TypeScript
               (vim.lsp.config :ts_ls {:on_attach on_attach

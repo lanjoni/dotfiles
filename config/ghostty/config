@@ -1,4 +1,4 @@
-font-size = 15
+font-size = 16
 font-family = JetBrainsMono Nerd Font Mono
 font-thicken = false
 font-feature = -calt
@@ -41,4 +41,6 @@ keybind = ctrl+f>j=new_split:down
 keybind = ctrl+f>k=new_split:up
 keybind = ctrl+f>l=new_split:right
 keybind = ctrl+f>t=new_split:right
-keybind = shift+enter=text:\n
+
+keybind = ctrl+f>g>g=scroll_to_top
+keybind = ctrl+f>shift+g=scroll_to_bottom

@@ -1,5 +1,4 @@
 [{1 :Olical/conjure
-  :version "v4.56.0"
   :branch "main"
   :init (fn []
           ;; alias for ConjureShadowSelect -> Csc

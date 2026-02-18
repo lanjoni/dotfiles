@@ -1,10 +1,16 @@
 font-size = 16
-font-family = JetBrainsMono Nerd Font Mono
+font-family = BerkeleyMono Nerd Font Mono
+font-style = Medium
 font-thicken = false
 font-feature = -calt
 adjust-cell-height = -2
 adjust-cell-width = -1
 bold-is-bright = true
+auto-update = check
+
+# fallback font to show nerd icons
+# if your font build has problems
+# font-family = JetBrainsMono Nerd Font Mono
 
 theme = tairiki
 macos-titlebar-proxy-icon = hidden
@@ -41,6 +47,8 @@ keybind = ctrl+f>j=new_split:down
 keybind = ctrl+f>k=new_split:up
 keybind = ctrl+f>l=new_split:right
 keybind = ctrl+f>t=new_split:right
+
+keybind = shift+enter=text:\n
 
 keybind = ctrl+f>g>g=scroll_to_top
 keybind = ctrl+f>shift+g=scroll_to_bottom

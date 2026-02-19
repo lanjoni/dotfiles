@@ -2,8 +2,6 @@ font-size = 16
 font-family = BerkeleyMono Nerd Font Mono
 font-style = Medium
 font-thicken = false
-font-feature = -calt
-adjust-cell-height = -2
 adjust-cell-width = -1
 bold-is-bright = true
 auto-update = check
@@ -12,7 +10,7 @@ auto-update = check
 # if your font build has problems
 # font-family = JetBrainsMono Nerd Font Mono
 
-theme = tairiki
+theme = kanagawa-dragon
 macos-titlebar-proxy-icon = hidden
 # add this if you want to use native tabs (without color scheme match)
 # macos-titlebar-style = native

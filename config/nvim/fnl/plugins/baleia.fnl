@@ -1,5 +1,6 @@
 [{1 :m00qek/baleia.nvim
-  :version "*"
+  :commit :1b25eac
+  :pin true
   :lazy false
   :config (fn []
             (let [baleia (require :baleia)

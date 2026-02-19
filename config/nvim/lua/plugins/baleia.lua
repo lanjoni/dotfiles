@@ -9,4 +9,4 @@ local function _1_()
   vim.api.nvim_create_user_command("BaleiaColorize", _2_, {bang = true})
   return vim.api.nvim_create_user_command("BaleiaLogs", conjure_baleia.logger.show, {bang = true})
 end
-return {{"m00qek/baleia.nvim", commit = "1b25eac", pin = true, config = _1_, lazy = false}}
+return {{"m00qek/baleia.nvim", config = _1_, lazy = false}}

@@ -51,7 +51,8 @@
                            :component_separators ""
                            :disabled_filetypes [:DiffviewFiles
                                                 :fzf
-                                                :DiffviewFileHistory]}
+                                                :DiffviewFileHistory
+                                                :snacks_terminal]}
                  :extensions [:fugitive
                               :fzf
                               :nvim-tree

@@ -50,8 +50,9 @@
                            :section_separators ["" ""]
                            :component_separators ""
                            :disabled_filetypes [:DiffviewFiles
-                                                :fzf
                                                 :DiffviewFileHistory
+                                                :fzf
+                                                :toggleterm
                                                 :snacks_terminal]}
                  :extensions [:fugitive
                               :fzf

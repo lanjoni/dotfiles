@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["@mohak34/opencode-notifier@latest"],
+  "mcp": {
+    "clojure-mcp": {
+      "type": "local",
+      "command": [
+        "clojure",
+        "-Tmcp",
+        "start",
+        ":config-profile",
+        ":cli-assist"
+      ]
+    }
+  }
+}

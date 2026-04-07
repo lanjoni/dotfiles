@@ -1,19 +1,14 @@
 (local handlers
-  {"textDocument/publishDiagnostics"
-   (vim.lsp.with
-     vim.lsp.diagnostic.on_publish_diagnostics
-     {:severity_sort true
-      :update_in_insert true
-      :underline true
-      :virtual_text false})
-   "textDocument/hover"
-   (vim.lsp.with
-     vim.lsp.handlers.hover
-     {:border "single"})
+  {"textDocument/hover"
+   (fn [err result ctx config]
+     (let [config (or config {})]
+       (set config.border "single")
+       (vim.lsp.handlers.hover err result ctx config)))
    "textDocument/signatureHelp"
-   (vim.lsp.with
-     vim.lsp.handlers.signature_help
-     {:border "single"})})
+   (fn [err result ctx config]
+     (let [config (or config {})]
+       (set config.border "single")
+       (vim.lsp.handlers.signature_help err result ctx config)))})
 
 (fn before_init [params]
   (set params.workDoneToken :1))
@@ -46,11 +41,11 @@
 
 (fn progress-handler [_ msg info]
   (let [client (vim.lsp.get_client_by_id info.client_id)] 
-    (when client 
+    (when client
       (set progress-message.status msg.value.kind)
       (when (not= msg.value.percentage nil)
         (set progress-message.percent msg.value.percentage))
-      (if 
+      (if
         (and (not= msg.value.message nil) 
              (and (not= msg.token nil)
                   (not= (type (tonumber msg.token)) "number")))

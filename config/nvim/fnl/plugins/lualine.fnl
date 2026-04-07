@@ -52,8 +52,8 @@
                            :disabled_filetypes [:DiffviewFiles
                                                 :DiffviewFileHistory
                                                 :fzf
-                                                :toggleterm
-                                                :snacks_terminal]}
+                                                :snacks_terminal
+                                                :toggleterm]}
                  :extensions [:fugitive
                               :fzf
                               :nvim-tree

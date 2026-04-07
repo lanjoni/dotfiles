@@ -3,6 +3,9 @@
                                        vim.diagnostic.severity.WARN ""
                                        vim.diagnostic.severity.INFO ""
                                        vim.diagnostic.severity.HINT ""}}
+                        :severity_sort true
+                        :underline true
+                        :update_in_insert true
                         :virtual_text true})
 
 [{1 :neovim/nvim-lspconfig

@@ -2,7 +2,7 @@
   :build ":TSUpdate"
   :config (fn []
             (let [treesitter (require :nvim-treesitter.configs)]
-              (treesitter.setup 
+              (treesitter.setup
                 {:highlight {:enable true}
                  :indent {:enable true}
                  :ensure_installed [:bash

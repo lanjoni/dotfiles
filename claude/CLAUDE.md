@@ -13,6 +13,16 @@
 - When you use destructuring like :keys, remember that the destructured symbol must always be used without the namespace. for example: (defn [{:keys [user/age]}] age). note we removed the `user` namespace and just used `age` to refer to the destructured symbol
 - Do not change any function that you don't have to
 - Do not run `lein lint` and/or `lein lint-fix` because all projects are already with the code properly fine - changing it or running any command will add changes not really needed to solve a problem or add some code
+- Do not add comments inside the code, not even that `; --- Something ---` structure for tests, avoid that
+
+## Git Commits
+- Never add "Co-Authored-By" or "Generated with Claude Code" lines to commit messages.
+- Follow [Conventional Commits](https://www.conventionalcommits.org/) format: `<type>[optional scope]: <description>`
+- Types: `feat`, `fix`, `refactor`, `style`, `docs`, `test`, `chore`
+- Subject line: max 50 characters, imperative mood, no trailing period
+- Body (optional): explain *what* and *why*, wrap at 72 characters, use `-` for bullet points
+- Separate subject from body with a blank line
+- Reference relevant tickets/issues in the footer (e.g., `Github issue #23`)
 
 # Communication Guidelines
 

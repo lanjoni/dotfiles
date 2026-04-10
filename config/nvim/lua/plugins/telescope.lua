@@ -1,4 +1,4 @@
--- [nfnl] Compiled from fnl/plugins/telescope.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] fnl/plugins/telescope.fnl
 local function _1_()
   vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files()<CR>", {noremap = true})
   vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()<CR>", {noremap = true})

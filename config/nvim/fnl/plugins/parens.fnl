@@ -13,9 +13,8 @@
 
 
  {1 :julienvincent/nvim-paredit
-  :lazy true
-  :ft [:clojure :fennel]
-  :config (fn []
+   :ft [:clojure :fennel :scheme :lisp :janet]
+   :config (fn []
             (let [paredit (require :nvim-paredit)]
               (paredit.setup {:keys {:<localleader>I [(fn []
                                                         (paredit.cursor.place_cursor

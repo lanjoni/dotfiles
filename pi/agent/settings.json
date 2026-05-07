@@ -1,0 +1,12 @@
+{
+  "defaultModel": "gpt-5.3-codex",
+  "defaultProvider": "openai-codex",
+  "lastChangelogVersion": "0.70.2",
+  "app.thinking.cycle": "tab",
+  "theme": "kanagawa-dragon",
+  "defaultThinkingLevel": "high",
+  "quietStartup": true,
+  "packages": [
+    "npm:pi-mcp-adapter"
+  ]
+}

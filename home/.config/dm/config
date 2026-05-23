@@ -1,0 +1,2 @@
+dotfiles-path = ~/gh/dotfiles/home
+excludes = .git,.clojure/.clj-kondo,.clojure/.lsp,.clojure/.cpcache

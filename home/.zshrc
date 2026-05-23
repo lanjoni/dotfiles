@@ -44,12 +44,10 @@ PATH="$HOME/.cargo/bin:$HOME/.cargo/bin/racer":$PATH
 
 # Brew
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/sbin:$PATH"
 
 # Aliases
 alias vim="nvim"
 alias n="nvim"
-alias j="z"
 
 # git
 alias ga='git add'
@@ -62,6 +60,9 @@ alias gpl='git pull'
 alias gco='git checkout'
 alias gcp='git cherry-pick'
 alias gdiff='git diff'
+
+# z
+alias j='z'
 
 # clojure
 alias clj='rlwrap clojure'
@@ -80,14 +81,14 @@ alias cljn='clojure -Tnew app :name'
 # java home
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 export JAVA_21_HOME=$(/usr/libexec/java_home -v21)
-export JAVA_25_HOME=$(/usr/libexec/java_home -v25)
+export JAVA_25_HOME=$(/usr/libexec/java_home -v25) # graalvm 24
 
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 alias java21='export JAVA_HOME=$JAVA_21_HOME'
 alias java25='export JAVA_HOME=$JAVA_25_HOME'
 
-# default java 21
-export JAVA_HOME=$JAVA_21_HOME
+# default java 23
+export JAVA_HOME=$JAVA_25_HOME
 
 # jdklink function to create a symlink for OpenJDK (if not automatically linked)
 jdklink() {
@@ -99,9 +100,7 @@ jdklink() {
 }
 
 # fnm
-# to use on cd it will auto switch node versions based on .nvmrc or .node-version file
-# eval "$(fnm env --use-on-cd --shell zsh)"
-eval "$(fnm env --shell zsh)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # work specific configs (git ignored)
 [ -f ~/.workrc ] && source ~/.workrc

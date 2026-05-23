@@ -1,7 +1,6 @@
-font-size = 16
+font-size = 15
 font-family = BerkeleyMono Nerd Font Mono
-font-style = Medium
-font-thicken = false
+font-style = Regular
 adjust-cell-width = -1
 bold-is-bright = true
 auto-update = check
@@ -14,6 +13,7 @@ theme = kanagawa-dragon
 macos-titlebar-proxy-icon = hidden
 # add this if you want to use native tabs (without color scheme match)
 # macos-titlebar-style = native
+macos-titlebar-style = tabs
 
 shell-integration-features = no-cursor
 cursor-style = block

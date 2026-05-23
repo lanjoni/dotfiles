@@ -1,12 +1,13 @@
 {
-  "defaultModel": "gpt-5.3-codex",
+  "defaultModel": "gpt-5.5",
   "defaultProvider": "openai-codex",
-  "lastChangelogVersion": "0.70.2",
+  "lastChangelogVersion": "0.75.4",
   "app.thinking.cycle": "tab",
   "theme": "kanagawa-dragon",
   "defaultThinkingLevel": "high",
   "quietStartup": true,
   "packages": [
-    "npm:pi-mcp-adapter"
+    "npm:pi-mcp-adapter",
+    "npm:pi-web-access"
   ]
 }

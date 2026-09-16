@@ -23,6 +23,9 @@
 (vim.keymap.set :n :<leader>hh ":bprev<CR>" {:noremap true})
 (vim.keymap.set :n :<leader>k  ":bdelete<CR>" {:noremap true})
 
+;; search word under cursor without word boundaries (so `antd.typography/Title` matches)
+(vim.keymap.set :n :* "/\\V<C-r><C-w><CR>" {:noremap true :silent true})
+
 ;; clear hidden buffers
 (fn clear-hidden-buffers []
   (each [_ buffer (pairs (vim.fn.getbufinfo))]

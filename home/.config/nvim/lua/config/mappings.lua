@@ -1,4 +1,4 @@
--- [nfnl] Compiled from fnl/config/mappings.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] fnl/config/mappings.fnl
 vim.keymap.set("n", "<space>", "<nop>", {noremap = true})
 vim.keymap.set("n", "<CR>", ":noh<CR><CR>", {noremap = true})
 vim.keymap.set("n", "<C-w>T", ":tab split<CR>", {noremap = true, silent = true})
@@ -12,6 +12,7 @@ vim.keymap.set("n", "<leader>ll", ":bnext<CR>", {noremap = true})
 vim.keymap.set("n", "<C-C-i>", ":bnext<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>hh", ":bprev<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>k", ":bdelete<CR>", {noremap = true})
+vim.keymap.set("n", "*", "/\\V<C-r><C-w><CR>", {noremap = true, silent = true})
 local function clear_hidden_buffers()
   for _, buffer in pairs(vim.fn.getbufinfo()) do
     if (buffer.hidden == 1) then

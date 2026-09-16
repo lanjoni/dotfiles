@@ -1,4 +1,4 @@
--- [nfnl] Compiled from fnl/config/init.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] fnl/config/init.fnl
 require("config.settings")
 require("config.mappings")
 return {}

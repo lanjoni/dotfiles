@@ -21,30 +21,11 @@
       ;; else
       "")))
 
-;; defining base theme
-(local background "#0D0D0D")
-(local foreground "#635E5A")
-(local kanagawa
-  {:normal {:a {:bg "#957FB8" :fg background}
-            :b {:bg background :fg "#957FB8"}
-            :c {:bg background :fg "#DCD7BA"}}
-   :insert {:a {:bg "#76946A" :fg background}
-            :b {:bg background :fg "#76946A"}}
-   :command {:a {:bg "#C0A36E" :fg background}
-             :b {:bg background :fg "#C0A36E"}}
-   :visual {:a {:bg "#7E9CD8" :fg background}
-            :b {:bg background :fg "#7E9CD8"}}
-   :replace {:a {:bg "#C34043" :fg background}
-             :b {:bg background :fg "#C34043"}}
-   :inactive {:a {:bg background :fg foreground}
-              :b {:bg background :fg foreground :gui "bold"}
-              :c {:bg background :fg foreground}}})
-
 [{1 :nvim-lualine/lualine.nvim
   :config (fn []
             (let [lualine (require :lualine)]
               (lualine.setup
-                {:options {:theme kanagawa
+                {:options {:theme "lackluster"
                            :icons_enabled true
                            :global_status true
                            :section_separators ["" ""]

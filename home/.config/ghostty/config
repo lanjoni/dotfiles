@@ -9,11 +9,16 @@ auto-update = check
 # if your font build has problems
 # font-family = JetBrainsMono Nerd Font Mono
 
-theme = kanagawa-dragon
+theme = dark:lackluster,light:lackluster-day
 macos-titlebar-proxy-icon = hidden
 # add this if you want to use native tabs (without color scheme match)
 # macos-titlebar-style = native
 macos-titlebar-style = tabs
+
+macos-icon = custom-style
+macos-icon-frame = aluminum
+macos-icon-ghost-color = #000000
+macos-icon-screen-color = #000000
 
 shell-integration-features = no-cursor
 cursor-style = block
